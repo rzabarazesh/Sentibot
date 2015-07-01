@@ -1,10 +1,8 @@
 __author__ = 'mohammadreza'
 
+# AN AI PROJECT
+# PLZ INSTALL PYTHON 2.6 AND SVMLIB + BINDINGS
 
-
-
-
-__author__ = 'mohammadreza'
 import re
 import csv
 import pickle
@@ -81,12 +79,19 @@ def featureVector(tweet):
     return features
 
 
-
 AllFeatures = list(set(AllFeatures))   # feture list
-
 ###
-
-
+print("-Training a new classifier ...")
+print("-Reading Learning set file")
+###
+for line in learningSet :
+    sentiment = line[0]
+    tweet = line[1]
+    processedTweet = preProcess(tweet)
+    tweetFeatures = getFeatures(processedTweet)
+    AllFeatures.extend(tweetFeatures)
+    AllTweets.append((tweetFeatures,sentiment))
+###
 
 
 ### START OF SVM TRAINING
