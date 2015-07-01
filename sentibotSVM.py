@@ -8,6 +8,9 @@ __author__ = 'mohammadreza'
 import re
 import csv
 import pickle
+import svm
+from svmutil import *
+
 _stopwordFileName = "stopwords.txt"
 
 def preProcess(tweet):
@@ -59,6 +62,8 @@ def getFeatures(tweet):
             v.append(word.lower())
     return v
 
+
+
 #### START OF PROGRAM
 print("......INITIATING THE SENTI BOT ....")
 print("- CODED BY MOHAMMAD REZA BARAZESH -")
@@ -77,14 +82,14 @@ def featureVector(tweet):
 
 
 
-AllFeatures = list(set(AllFeatures))
+AllFeatures = list(set(AllFeatures))   # feture list
 
 ###
 
 
 
 
-
+### START OF SVM TRAINING
 
 
 def getSVMFeatureVectorAndLabels(tweets, featureList):
@@ -123,10 +128,10 @@ def getSVMFeatureVectorAndLabels(tweets, featureList):
     return {'feature_vector' : feature_vector, 'labels': labels}
 #end
 
-#Train the classifier
+#Train the SVM
 result = getSVMFeatureVectorandLabels(tweets, featureList)
 problem = svm_problem(result['labels'], result['feature_vector'])
-#'-q' option suppress console output
+#'-q' DONT SIDPLAY CONSOLE OUTPUT
 param = svm_parameter('-q')
 param.kernel_type = LINEAR
 classifier = svm_train(problem, param)
