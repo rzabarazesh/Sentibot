@@ -134,7 +134,7 @@ def getSVMFeatureVectorAndLabels(tweets, featureList):
 #end
 
 #Train the SVM
-result = getSVMFeatureVectorandLabels(tweets, featureList)
+result = getSVMFeatureVectorandLabels(AllTweets, AllFeatures)
 problem = svm_problem(result['labels'], result['feature_vector'])
 #'-q' DONT SIDPLAY CONSOLE OUTPUT
 param = svm_parameter('-q')
