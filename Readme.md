@@ -3,9 +3,9 @@ SENTIBOT
 A sentiment detection tool using various algorithms for the english and farsi languages.                         
 
 
-NOTE : U WILL NEED PYTHON 2.6 + SVMLIB + SVM LIB BINDINGS FOR PYTHON FOR SVM VERSION
-       ---
-       U WILL NEED PYTHON 2.7 OR HIGHER + NLTK LIBRARY FOR NLTK VERSION
+NOTE :
+1- NEEDS PYTHON 2.6 + SVMLIB + SVM LIB BINDINGS FOR PYTHON FOR SVM VERSION
+2- NEEDS PYTHON 2.7 OR HIGHER + NLTK LIBRARY FOR NLTK VERSION
 
 PERSIAN_SVM_UNTESTED.py	 ---- A revision of the original progrem . made suitable for utf characters
 learning.csv	---- learning set in .csv format
