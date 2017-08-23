@@ -3,8 +3,8 @@ SENTIBOT
 A sentiment detection tool using various algorithms for the english and farsi languages.                         
 
 
-NOTE :
-
+NOTE 
+====
 NEEDS PYTHON 2.6 + SVMLIB + SVM LIB BINDINGS FOR PYTHON FOR SVM VERSION
 
 NEEDS PYTHON 2.7 OR HIGHER + NLTK LIBRARY FOR NLTK VERSION
